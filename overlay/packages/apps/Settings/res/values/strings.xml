@@ -19,5 +19,8 @@
     <!-- Main settings screen, setting title for the user to go into the About phone screen -->
     <string name="about_settings">About tablet</string>
 
+    <add-resource type="string" name="v9_settings_title"/>
+    <string name="v9_settings_title">ZTE V9/Light settings</string>
+
 </resources>
 
