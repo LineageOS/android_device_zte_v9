@@ -127,7 +127,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.sf.lcd_density=160 \
-    ro.sf.hwrotation=270
+    ro.sf.hwrotation=270 \
+    persist.sys.use_16bpp_alpha=1
 
 # V9 uses medium-density artwork where available
 PRODUCT_LOCALES += mdpi
