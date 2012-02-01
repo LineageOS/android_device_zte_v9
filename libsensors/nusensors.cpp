@@ -29,7 +29,7 @@
 #include <cutils/log.h>
 
 #include "nusensors.h"
-#include "TaosLight.h"
+#include "BladeLight.h"
 #include "AkmSensor.h"
 /*****************************************************************************/
 
@@ -74,7 +74,7 @@ private:
 
 sensors_poll_context_t::sensors_poll_context_t()
 {
-    mSensors[light] = new TaosLight();
+    mSensors[light] = new BladeLight(const_cast<char *>(TAOS_DEVICE_NAME));
     mPollFds[light].fd = mSensors[light]->getFd();
     mPollFds[light].events = POLLIN;
     mPollFds[light].revents = 0;
@@ -107,7 +107,7 @@ sensors_poll_context_t::~sensors_poll_context_t() {
 int sensors_poll_context_t::activate(int handle, int enabled) {
     int index = handleToDriver(handle);
     if (index < 0) return index;
-    LOGE("mSensors[%i]->enable(%i, %i)",index, handle, enabled);
+    LOGI("mSensors[%i]->enable(%i, %i)",index, handle, enabled);
     int err =  mSensors[index]->enable(handle, enabled);
     if (enabled && !err) {
         const char wakeMessage(WAKE_MESSAGE);

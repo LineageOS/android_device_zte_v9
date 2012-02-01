@@ -15,6 +15,7 @@
  */
 
 #include <hardware/sensors.h>
+#include <stdio.h>
 
 #include "nusensors.h"
 
@@ -30,7 +31,7 @@
  * resolution by 4 bits.
  */
 
-static const struct sensor_t sSensorList[] = {
+static const struct sensor_t sTaosSensorList[] = {
         { "AK8973 3-axis Accelerometer",
                 "Asahi Kasei",
                 1, SENSORS_HANDLE_BASE+ID_A,
@@ -55,8 +56,8 @@ static int open_sensors(const struct hw_module_t* module, const char* name,
 static int sensors__get_sensors_list(struct sensors_module_t* module,
         struct sensor_t const** list)
 {
-    *list = sSensorList;
-    return ARRAY_SIZE(sSensorList);
+    *list = sTaosSensorList;
+    return ARRAY_SIZE(sTaosSensorList);
 }
 
 static struct hw_module_methods_t sensors_module_methods = {
