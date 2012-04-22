@@ -31,6 +31,9 @@ TARGET_PREBUILT_RECOVERY_KERNEL := device/zte/v9/recovery_kernel
 BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/zte/v9/recovery/recovery_ui.c
 TARGET_RECOVERY_INITRC := device/zte/v9/recovery/recovery.rc
 
+TARGET_KERNEL_SOURCE := kernel/zte/zte-kernel-msm7x27
+TARGET_KERNEL_CONFIG := cyanogen_v9_defconfig
+
 BOARD_KERNEL_BASE := 0x02600000
 BOARD_KERNEL_CMDLINE := androidboot.hardware=v9 console=null
 

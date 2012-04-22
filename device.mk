@@ -72,14 +72,6 @@ PRODUCT_COPY_FILES += \
         device/zte/v9/init.bt.sh:system/etc/init.bt.sh \
         system/bluetooth/data/main.le.conf:system/etc/bluetooth/main.conf
 
-# Prebuilt modules
-PRODUCT_COPY_FILES += \
-        device/zte/v9/prebuilt/cifs.ko:system/lib/modules/cifs.ko \
-        device/zte/v9/prebuilt/lzo_compress.ko:system/lib/modules/lzo_compress.ko \
-        device/zte/v9/prebuilt/lzo_decompress.ko:system/lib/modules/lzo_decompress.ko \
-        device/zte/v9/prebuilt/tun.ko:system/lib/modules/tun.ko \
-        device/zte/v9/prebuilt/zram.ko:system/lib/modules/zram.ko
-
 # WiFi
 PRODUCT_COPY_FILES += \
         device/zte/v9/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf \
